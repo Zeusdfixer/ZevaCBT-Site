@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <title>Zeva CBT Practice</title>
+  <link rel="icon" type="image/png" href="assets/favicon-32.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile-extra.css" />
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Licensing loads FIRST and decides what happens next — see
+       mobile-activation.js. The core app scripts (data-store.js,
+       app.js, etc.) are only injected once we know the device is
+       either activated or proceeding in trial mode; this avoids a
+       race where app.js's own auto-running init() would start
+       rendering the login screen before the license check finishes. -->
+  <script src="mobile-license.js"></script>
+  <script src="mobile-activation.js"></script>
+</body>
+</html>
